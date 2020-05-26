@@ -2,10 +2,10 @@
 
 ## LGs:
 
-- [ ] **Define object in programming domain**
-- [ ] **Create a class and instantiate an instance of the class and Explain the difference between a class and an instance**
-- [ ] **Pass arguments to new by defining an initialize method in class**
-- [ ] **Define attribute readers and writers using attr_ macros**
+- [x] **Define object in programming domain**
+- [x] **Create a class and instantiate an instance of the class and Explain the difference between a class and an instance**
+- [x] **Pass arguments to new by defining an initialize method in class**
+- [x] **Define attribute readers and writers using attr_ macros**
 
 ### Define object in programming domain
 * "Everything in Ruby is an object." 
@@ -19,9 +19,9 @@
             * num.methods
 
 **TASK:**
-* Names = [“Vidhi”, “Sylwia”, "Alex"]
+* names = [“Vidhi”, “Sylwia”, "Alex"]
     Puts names.class (What will we get back?)
-    Names.methods (How many method it returns?)
+    names.methods (How many method it returns?)
     If we want to join the array which method we will use?
 
 ### Create a class and instantiate an instance of the class and Explain the difference between a class and an instance
