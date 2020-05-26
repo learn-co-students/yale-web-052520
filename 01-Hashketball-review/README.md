@@ -90,6 +90,6 @@ numbers = [1, 4, 5, 7, 8]
 | each  | Same array | returns `[‘cat’, ‘dog’, ‘pig’]` and prints each animal | <code> animals.each do &#124;animal&#124; puts animal end </code>|
 | map  | Return new array with 1 on 1 mapping | `[ 'cute cat’, ‘cute dog’, ‘cute pig’]` |<code> animals.map do &#124;animal&#124; “cute #{animal}” end </code> |
 | find  | single/first element that matches the condition | 'dog' | <code> animals.find do &#124;animal&#124; animal == 'dog' end </code> |
-| select  | Returns an array of all the items that matches the condition | [4,8] |<code> numbers.select do &#124;number&#124; number.even? end </code> |
+| select  | Returns an array of all the items that matches the condition | `[4,8]` |<code> numbers.select do &#124;number&#124; number.even? end </code> |
 
 
