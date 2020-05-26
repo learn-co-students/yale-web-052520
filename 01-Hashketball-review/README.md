@@ -78,6 +78,8 @@ def game_hash
 
 ### Fill out the Table:
 
+* Use following arrays as an example:
+
 ```ruby
 animals = [‘cat’, ‘dog’, ‘pig’]
 numbers = [1, 4, 5, 7, 8]
@@ -85,8 +87,9 @@ numbers = [1, 4, 5, 7, 8]
 
 | Method | What does it return? | What should the block return? | What does it look like? |
 | ------------- | ------------- | ------------- | ------------- |
-| each  |  |  |  |
-| map  |  |  |  |
-| find  |  | | |
-| select  | |  |  |
+| each  | Same array | returns same array => animals and prints each animal | `animals.each do |animal| puts animal end` |
+| map  | Return new array with 1 on 1 mapping | `[ 'cute cat’, ‘cute dog’, ‘cute pig’]` | `animals.map do |animal|  “cute #{animal}”  end` |
+| find  | single/first element that matches the condition | ‘dog’ | `found_animal = animals.find do |animal| animal == ‘dog' end` |
+| select  | Returns an array of all the items that matches the condition | [4,8] | `numbers.select do |number| number.even? end` |
+
 
