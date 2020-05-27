@@ -5,7 +5,7 @@ class Pet
     attr_accessor :name, :type
 
     # PETS = []
-    @@all = []
+    @@all = []cd ..
 
     def initialize(petType: type, petName: "fido")
         @type = petType
