@@ -2,16 +2,17 @@
 
 ### LGs:
 
-- [x] **Practice keeping groups of data related to classes on the class as a class variable**
-- [x] **Understand single source of truth by not storing collections of objects on other objects**
-- [x] **Implement both sides of a many to many relationship**
+- [ ] **Practice keeping groups of data related to classes on the class as a class variable**
+- [ ] **Understand single source of truth by not storing collections of objects on other objects**
+- [ ] **Implement both sides of a many to many relationship**
 
 
 ---
 
 ### Domain modelling:
 
-* A doctor has many patients and a patient has many classes
+![](https://i.imgur.com/IXtlVuq.png)
+* A doctor has many patients and a patient has many doctors
 * A doctor has many appointments / appointment belongs to doctor (we already know how to model this)
 * A patient has many appointments / appointment belongs to patient (we already know how to model this)
 * A doctor has many patients through appointments
@@ -47,9 +48,9 @@
     * #appointments 
 * A patient has how many appointments!
     * #appointments 
-* A doctor has how many patients!
+* A doctor has list of patients!
     * #patients
-* A patients has how many doctors!
+* A patients has list of doctors!
     * #doctors
 
 
