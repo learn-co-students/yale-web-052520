@@ -96,10 +96,18 @@
 2. Write the SQL to return fans that are not fans of the black eyed peas. ArtistId **169**
 
 ```sql
-
+    SELECT * FROM original_fans WHERE artist_id != 169
+    SELECT * FROM original_fans WHERE NOT artist_id = 169
 ```
 3. Write the SQL to return the name of all of the artists in the 'Pop' Genre
 
 ```sql
-
+    SELECT DISTINCT artists.name FROM artists
+    JOIN albums
+    ON artists.id = albums.artist_id
+    JOIN tracks
+    ON albums.id = tracks.album_id
+    JOIN genres
+    ON tracks.genre_id = genres.id
+    WHERE genres.name = 'Pop';
 ```
