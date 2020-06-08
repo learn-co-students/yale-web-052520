@@ -1,9 +1,9 @@
 # ActiveRecord Associations
 
 ### LGs:
-- [ ] **Practice with ActiveRecord::Base instance and class methods**
-- [ ] **Implement one-to-many relationships using ActiveRecord has_many and belongs_to**
-- [ ] **Implement many-to-many relationships using ActiveRecord has_many, :through**
+- [x] **Practice with ActiveRecord::Base instance and class methods**
+- [x] **Implement one-to-many relationships using ActiveRecord has_many and belongs_to**
+- [x] **Implement many-to-many relationships using ActiveRecord has_many, :through**
 
 ---
 
@@ -15,7 +15,7 @@
         * .all
         * .first
         * .find
-        * .find_by{ attribute: value } 
+        * .find_by(column_name: value ) 
 * **Implement one-to-many relationships using ActiveRecord has_many and belongs_to**
     * Find Author for Book:
         ```ruby
@@ -48,9 +48,8 @@
 ---
 
 ### Tasks:
-1. Check `Author.where(name: "Vidhi)"`
-2. Implement relationship between `Bakery` and `Review`
-3. Implement relationship between `Customer` and `Bakery`
+1. Check `Author.where(name: "Jack)"`
+2. Define relationships in `review`  and `customer` models
 
 ---
 Extra Reading: 
