@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_152259) do
+ActiveRecord::Schema.define(version: 2020_06_09_153157) do
+
+  create_table "cases", force: :cascade do |t|
+    t.integer "country_id"
+    t.integer "total"
+    t.integer "recovered"
+  end
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
