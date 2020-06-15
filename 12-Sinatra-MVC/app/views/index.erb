@@ -1,0 +1,13 @@
+<!-- <h4>My name is <%= @name %> </h4> -->
+
+<h4> List of books </h4>
+<ul>
+    <% @books.each do |book| %>
+    
+        <a href="/books/<%= book.id %>">
+
+            <li> <%= book.title %> </li>
+
+        </a> 
+    <% end %>
+</ul>
