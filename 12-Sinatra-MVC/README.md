@@ -5,7 +5,7 @@
 - [x] Implement one model that inherit from ActiveRecord
 - [x] Implement one controller to route and process requests
 - [x] Implement ERB template and get it to render data from controller and model
-- [x] Identify the connection between REST and CRUD
+
 
 #### **Explain the Model View Controller (MVC) pattern and give an example**
 * How and Why we use the MVC pattern?
@@ -17,7 +17,7 @@
 * Sinatra from scratch
 * config .ru
 
-**TASK:** Take 1 min with you partner and discuss the MVC pattern
+**TASK:** Take 2 mins with you partner and discuss the MVC pattern
     
 #### **Implement one model that inherit from ActiveRecord**
 * Model
@@ -47,35 +47,3 @@
     * how the params hash changes and where the data comes from?
     * show.erb
 
-#### **Identify the connection between REST and CRUD**
-* What REST stands for?
-    * REpresentational State Transfer
-        * My URL talk about the state of application team
-        * http://www.espn.com/nba/players
-    * Index page
-    * Show page
-    * New page
-        * form
-        * methods
-        * how params hash is build?
-    * Create route
-    * Edit page
-        * methods
-        * set :method_override, true
-    * Update route
-    * Delete route
-
-
-### Deliverables:
-* View all the books
-    * get /books
-* View info on an individual book
-    * get /books/:id
-* Create a new book
-    * get /books/new
-    * post /books
-* edit an existing book
-    * get /books/:id/edit
-    * patch /books/:id
-* delete an existing book
-    * delete /books/:id
