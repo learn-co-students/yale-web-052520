@@ -5,3 +5,9 @@
 
 <label>breed:</label>
 <h4> <%= @dog.breed %> </h4>
+
+<label>owner:</label>
+
+<a href="/owners/<%= @dog.owner.id %>">
+    <h4> <%= @dog.owner.name %> </h4>
+</a>
