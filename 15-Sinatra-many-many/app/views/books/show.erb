@@ -1,0 +1,23 @@
+<p>Book Info: </p>
+
+<label>Title:</label>
+<h3><%= @book.title %> </h3>
+
+<label>year:</label>
+<h4><%= @book.year %> </h4>
+
+<label> Authors: </label>
+<ul>
+<% @book.authors.each do |author| %>
+    <li>
+        <%= author.name %>
+    </li>
+<% end %>
+</ul>
+
+<form action="/books/<%= @book.id%>" method="post">
+<input type="hidden" name="_method" value="delete" />
+
+
+<input type="submit" value="delete book">
+</form>
