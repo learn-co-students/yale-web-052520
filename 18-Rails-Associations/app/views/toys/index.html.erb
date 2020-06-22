@@ -1,0 +1,9 @@
+<h3>List of all the Toys: </h3>
+
+<ul>
+<% @toys.each do |toy| %>
+    <li>
+        <%= link_to toy.name, "/toys/#{toy.id}" %>
+    </li>
+<% end %>
+</ul>
