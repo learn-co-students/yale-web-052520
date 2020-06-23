@@ -1,0 +1,7 @@
+<h4>
+    Name: <%= @toy.name%> 
+</h4>
+
+<h4>
+    Owner:  <%= link_to @toy.dog.name, "/dogs/#{@toy.dog.id}"%>
+</h4>

@@ -970,3 +970,41 @@ Completed 200 OK in 270ms (Views: 244.3ms | ActiveRecord: 12.2ms | Allocations: 
   [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mDog Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "dogs" LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+Started GET "/dogs/4/edit" for ::1 at 2020-06-22 14:52:42 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (Duration: 25.9ms | Allocations: 3196)
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 33.9ms | Allocations: 3626)
+Completed 200 OK in 84ms (Views: 69.6ms | ActiveRecord: 0.6ms | Allocations: 14851)
+
+
+Started PATCH "/dogs/4" for ::1 at 2020-06-22 14:52:47 -0500
+Processing by DogsController#update as HTML
+  Parameters: {"authenticity_token"=>"BwXyN4AJd76JnMQWVl4KQAL5AXmM1m8PmeQK6vSx8JSKFoAJ/oGmZMXSLboSMuepXPKX0FbDGpipEc+YHReQGQ==", "dog"=>{"name"=>"Ruby Sr.", "breed"=>"Corgi", "age"=>"7"}, "commit"=>"Update Dog", "id"=>"4"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:35:in `update'
+  [1m[36mDog Update (1.4ms)[0m  [1m[33mUPDATE "dogs" SET "name" = ?, "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["name", "Ruby Sr."], ["updated_at", "2020-06-22 19:52:47.931448"], ["id", 4]]
+  ↳ app/controllers/dogs_controller.rb:35:in `update'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:35:in `update'
+Redirected to http://localhost:3000/dogs/4
+Completed 302 Found in 11ms (ActiveRecord: 4.5ms | Allocations: 3586)
+
+
+Started GET "/dogs/4" for ::1 at 2020-06-22 14:52:47 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:46:in `current_dog'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 141)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 2742)
+
+
