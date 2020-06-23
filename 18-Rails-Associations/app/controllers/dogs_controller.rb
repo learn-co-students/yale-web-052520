@@ -1,6 +1,6 @@
 class DogsController < ApplicationController
 
-    before_action :current_dog, only: [:show, :edit, :update]
+    before_action :current_dog, only: [:show, :edit, :update, :destroy]
 
     def index
         @dogs = Dog.all
@@ -24,6 +24,14 @@ class DogsController < ApplicationController
     def update
         @dog.update(dog_params)
         redirect_to dog
+    end
+
+    def destroy
+        # byebug
+        @dog.destroy
+
+        redirect_to "/dogs"
+        # redirect_to dogs_path
     end
 
     def current_dog
