@@ -14,8 +14,17 @@ class DogsController < ApplicationController
     end
 
     def create
-        dog = Dog.create(dog_params)
-        redirect_to "/dogs/#{dog.id}"
+        dog = Dog.new(dog_params)
+
+        if dog.valid?
+            dog.save
+            redirect_to "/dogs/#{dog.id}"
+        else
+            # flash[:first] = "Hi!!!"
+            byebug
+            flash[:errors] = dog.errors.full_messages
+            redirect_to "/dogs/new"
+        end
     end
 
     def edit 
