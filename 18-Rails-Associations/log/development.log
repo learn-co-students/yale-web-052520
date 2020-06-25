@@ -1982,3 +1982,172 @@ Processing by BooksController#new as HTML
 Completed 200 OK in 6404ms (Views: 6150.0ms | ActiveRecord: 13.4ms | Allocations: 19831937)
 
 
+Started GET "/toys/new" for ::1 at 2020-06-25 17:05:59 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 22.1ms | Allocations: 4760)
+Completed 200 OK in 74ms (Views: 51.4ms | ActiveRecord: 1.6ms | Allocations: 20895)
+
+
+Started POST "/toys" for ::1 at 2020-06-25 17:06:04 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"RB8r4GKfLe2XVMEMYnTnaPTleG6FcjencxmH6WKRy5jMO/yq0q1TD1fjCtvnp+GMHS49hU9Cqbgj0BJjH+RFmQ==", "toy"=>{"name"=>"", "dog_id"=>"1", "dog"=>{"name"=>"hh"}}, "commit"=>"Create Toy"}
+[31mUnpermitted parameters: :name, :dog_id, :dog[0m
+[31mUnpermitted parameter: :dog[0m
+[31mUnpermitted parameters: :name, :dog_id, :dog[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+Completed 500 Internal Server Error in 360359ms (ActiveRecord: 0.0ms | Allocations: 297873)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/toys_controller.rb:19:in `create'
+Started GET "/toys" for ::1 at 2020-06-25 17:12:11 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (1.8ms)[0m  [1m[34mSELECT "toys".* FROM "toys"[0m
+  ↳ app/views/toys/index.html.erb:4
+  Rendered toys/index.html.erb within layouts/application (Duration: 88.3ms | Allocations: 906136)
+Completed 200 OK in 166ms (Views: 120.2ms | ActiveRecord: 12.0ms | Allocations: 1686074)
+
+
+Started GET "/toys/2" for ::1 at 2020-06-25 17:12:14 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mToy Load (1.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:40:in `current_toy'
+  Rendering toys/show.html.erb within layouts/application
+  [1m[36mDog Load (1.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/toys/show.html.erb:6
+  Rendered toys/show.html.erb within layouts/application (Duration: 146.3ms | Allocations: 1444647)
+Completed 200 OK in 234ms (Views: 188.0ms | ActiveRecord: 11.6ms | Allocations: 2329079)
+
+
+Started GET "/toys/new" for ::1 at 2020-06-25 17:12:17 -0500
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (4.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 62.1ms | Allocations: 804292)
+Completed 200 OK in 123ms (Views: 102.9ms | ActiveRecord: 4.6ms | Allocations: 1470880)
+
+
+Started POST "/toys" for ::1 at 2020-06-25 17:12:36 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"WcToFhGor5tyFpWJ4YSA+D5eAyVSRNoiil5SGZ5GzlLR4D9coZrRebKhXl5kV4Yc15VGzph0RD3al8eT4zNAUw==", "toy"=>{"name"=>"test", "dog_id"=>"1", "dog"=>{"name"=>"java"}}, "commit"=>"Create Toy"}
+[31mUnpermitted parameter: :dog[0m
+Completed 500 Internal Server Error in 1147ms (ActiveRecord: 0.0ms | Allocations: 11507432)
+
+
+  
+NameError (undefined local variable or method `arams' for #<ToysController:0x00007fa580ab1ff8>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/toys_controller.rb:23:in `create'
+Started POST "/toys" for ::1 at 2020-06-25 17:12:55 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"WcToFhGor5tyFpWJ4YSA+D5eAyVSRNoiil5SGZ5GzlLR4D9coZrRebKhXl5kV4Yc15VGzph0RD3al8eT4zNAUw==", "toy"=>{"name"=>"test", "dog_id"=>"1", "dog"=>{"name"=>"java"}}, "commit"=>"Create Toy"}
+[31mUnpermitted parameter: :dog[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 14.8ms | Allocations: 2506525)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'dog' for Dog.):
+  
+app/controllers/toys_controller.rb:23:in `create'
+Started GET "/toys/new" for ::1 at 2020-06-25 17:14:00 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (5.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 129.9ms | Allocations: 807356)
+Completed 200 OK in 402ms (Views: 186.1ms | ActiveRecord: 24.3ms | Allocations: 3564006)
+
+
+Started POST "/toys" for ::1 at 2020-06-25 17:14:06 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"19mGqrdwLpeCKMPzLHipaTcxM87vwn5V8jJOUnCGXL9f/VHgB0JQdUKfCCSpq6+N3vp2JSXy4Eqi+9vYDfPSvg==", "toy"=>{"name"=>"test", "dog_id"=>"1", "dog"=>{"name"=>"java"}}, "commit"=>"Create Toy"}
+[31mUnpermitted parameters: :name, :dog_id[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+Completed 500 Internal Server Error in 138308ms (ActiveRecord: 0.0ms | Allocations: 262178)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/toys_controller.rb:20:in `create'
+Started GET "/toys/new" for ::1 at 2020-06-25 17:16:41 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (1.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 87.3ms | Allocations: 807354)
+Completed 200 OK in 340ms (Views: 144.1ms | ActiveRecord: 16.9ms | Allocations: 3564690)
+
+
+Started POST "/toys" for ::1 at 2020-06-25 17:17:37 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"S8409vXvztZdZKr+k75JlbGr83v94/NqTHSY/Ff3VrDD6uO8Rd2wNJ3TYSkWbU9xWGC2kDfTbXUcvQ12KoLYsQ==", "toy"=>{"name"=>"test", "dog_id"=>"1", "dog"=>{"name"=>"java"}}, "commit"=>"Create Toy"}
+[31mUnpermitted parameter: :dog[0m
+[31mUnpermitted parameters: :name, :dog_id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/toys_controller.rb:24:in `create'
+  [1m[36mDog Create (2.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "java"], ["created_at", "2020-06-25 22:18:05.674959"], ["updated_at", "2020-06-25 22:18:05.674959"]]
+  ↳ app/controllers/toys_controller.rb:24:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/toys_controller.rb:24:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/toys_controller.rb:29:in `create'
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:29:in `create'
+  [1m[36mToy Create (0.5ms)[0m  [1m[32mINSERT INTO "toys" ("name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["dog_id", 5], ["created_at", "2020-06-25 22:18:05.694965"], ["updated_at", "2020-06-25 22:18:05.694965"]]
+  ↳ app/controllers/toys_controller.rb:29:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/toys_controller.rb:29:in `create'
+Redirected to http://localhost:3000/toys/4
+Completed 302 Found in 28103ms (ActiveRecord: 6.5ms | Allocations: 236234)
+
+
+Started GET "/toys/4" for ::1 at 2020-06-25 17:18:05 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:46:in `current_toy'
+  Rendering toys/show.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/toys/show.html.erb:6
+  Rendered toys/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 753)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 3500)
+
+
+Started GET "/dogs/5" for ::1 at 2020-06-25 17:18:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:38:in `current_dog'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 746)
+Completed 200 OK in 22ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 8736)
+
+
