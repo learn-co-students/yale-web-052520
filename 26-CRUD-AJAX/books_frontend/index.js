@@ -50,6 +50,7 @@ function addBook(book){
     fetch(url+book.id, configObj)
     .then(res => res.json())
     .then(updatedBook => {
+      book = updatedBook // this will update the previous book obj with updated book obj
       updatedBook.read ? btn.innerText = "Mark Unread" : btn.innerText = "Mark Read"
     })
   })
