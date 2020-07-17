@@ -14,5 +14,5 @@
 
 #### Use serializer to send response back
 * `gem 'active_model_serializers'`
-* `rails g serializer user`
+* `rails g serializer instructor`
 * `ActiveModel::Serializer` provides a way of creating custom JSON by representing each resource as a class that inherits from `ActiveModel::Serializer`. With that in mind, it gives us a better way of testing compared to other methods. It can also be tested in isolation regardless of how the data retrieval is done in the controller.

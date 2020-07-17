@@ -15,7 +15,7 @@ i3 = Instructor.create(name: "Sylwia")
 
 Student.create(name: "Paul", major: "SE", age: 35, instructor: i1 )
 Student.create(name: "Stephen", major: "SE", age: 30, instructor: i2 )
-Student.create(name: "Blake", major: "SE", age: 18, instructor: i3 )
+Student.create(name: "Blake", major: "SE", age: 28, instructor: i3 )
 Student.create(name: "Cornelius", major: "SE", age: 20, instructor: i1 )
 Student.create(name: "Mitchell", major: "SE", age: 29, instructor: i2 )
 Student.create(name: "Anam", major: "SE", age: 26, instructor: i3 )
